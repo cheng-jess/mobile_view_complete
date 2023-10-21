@@ -1,0 +1,154 @@
+body{
+    background-color: rgb(0, 73, 101);
+    font-family: "Trebuchet MS";
+    color: white;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+h2{
+    color: pink;
+    font-size: 30pt;
+    text-align: center;
+    transition: transform 0.5s;
+    padding-top: 10px;
+}
+
+h2:hover{
+    transform: scale(3);
+}
+h3{
+    color: pink;
+    font-size: 18pt;
+    padding-top: 5px;
+}
+
+h4{
+    color: pink;
+}
+
+nav {
+    border: 2px solid white;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: 20px;
+    padding: 0px;
+}
+nav li {
+    margin: 0 15px;
+}
+.skip {
+    display: none;
+}
+nav a.current{
+    background-color: #333;
+    color: pink;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.food{
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    flex-direction: column;
+}
+
+.photo-grid figure {
+    text-align: center;
+}
+
+.photo-grid img {
+    max-width: 100%;
+}
+
+.photo-grid figcaption {
+    margin: 10px 0;
+    font-size: 14px;
+}
+.headimg {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    flex-direction: column;
+    /* Stack child elements vertically */
+    /*height: 100vh;*/
+    /* Optional: Center vertically by setting height */
+    padding: 15px;
+}
+
+.headimg img {
+    margin: 15px;
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    flex-direction: column;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gif {
+        animation: none;
+        /* Disable animation */
+        display: none;
+        /* Hide the GIF or animated content */
+    }
+
+    h2,
+    h2:hover {
+        transition: none;
+    }
+}
+
+nav li{
+    color: white;
+    display: inline;
+    list-style-type: none;
+}
+
+.ing ul{
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+ol{
+    list-style-type: decimal;
+    padding-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+.gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+.skip {
+    display: block;
+}
+}
