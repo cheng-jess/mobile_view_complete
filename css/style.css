@@ -122,7 +122,7 @@ nav a.current{
 
     h2,
     h2:hover {
-        transition: none;
+        transform: none;
     }
 }
 
